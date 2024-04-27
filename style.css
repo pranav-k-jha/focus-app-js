@@ -1,10 +1,10 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgba(72, 163, 0, 0.07);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
@@ -51,7 +51,6 @@ main {
 
 .progress-value {
   height: 100%;
-  width: 0;
   background-color: #48a300;
   border-radius: 15px;
   font-weight: 500;
@@ -59,6 +58,8 @@ main {
   color: #eeffe0;
   display: flex;
   align-items: center;
+
+  width: 0;
   overflow: hidden;
 }
 
@@ -74,7 +75,7 @@ main {
 }
 
 .show-error .error-label {
-    display: block;
+  display: block;
 }
 
 .goal-container {
@@ -101,7 +102,7 @@ main {
 }
 
 .check-icon {
-    display: none;
+  display: none;
 }
 
 .goal-input {
@@ -133,17 +134,17 @@ main {
 }
 
 .completed .custom-checkbox {
-    background: #48A300;
-    border-color: #48A300;
+  background: #48a300;
+  border-color: #48a300;
 }
 
 .completed .check-icon {
-    display: block;
+  display: block;
 }
 
 .completed .goal-input {
-    color: #48A300;
-    text-decoration-line: line-through;
+  color: #48a300;
+  text-decoration-line: line-through;
 }
 
 @media (max-width: 768px) {
@@ -154,7 +155,7 @@ main {
   .app-container {
     padding: 16px 32px;
   }
-  
+
   .goal-container {
     height: 64px;
     margin-bottom: 24px;
@@ -165,7 +166,7 @@ main {
     width: 20px;
     height: 20px;
   }
-  
+
   .made-with {
     margin-top: 32px;
   }
