@@ -7,18 +7,23 @@ const progressLabel = document.querySelector(".progress-label");
 const allQuotes = [
   "Set your Goals for Today",
   "Well begun is half done!",
-  "Just a step away, keep going!",
-  "Whoa! You just completed all the goals, time for chill :D",
+  "Just few more steps away, keep going!",
+  "Just few more steps away, keep going!",
+  "Just few more steps away, keep going!",
+  "Whoa! You just completed all the goals, time for chill :D"
 ];
+const inputLength = inputList.length;
 
 const allGoals = JSON.parse(localStorage.getItem("allGoals")) || {};
 let countCompleted = Object.values(allGoals).filter(
   (value) => value.completed
 ).length;
 
-progressValue.style.width = `${(countCompleted / 3) * 100}%`;
-progressValue.firstElementChild.innerText = `${countCompleted}/3 completed`;
-progressLabel.innerText = allQuotes[countCompleted];
+progressValue.style.width = `${(countCompleted / inputLength) * 100}%`;
+progressValue.firstElementChild.innerText = `${countCompleted}/${inputLength} completed`;
+progressLabel.innerText =
+  allQuotes[countCompleted] ||
+  `Congratulation for completing the ${inputLength}th the goal for today!`;
 
 checkboxList.forEach((checkbox) =>
   checkbox.addEventListener("click", (e) => {
@@ -33,9 +38,11 @@ checkboxList.forEach((checkbox) =>
         (value) => value.completed
       ).length;
 
-      progressValue.style.width = `${(countCompleted / 3) * 100}%`;
-      progressValue.firstElementChild.innerText = `${countCompleted}/3 completed`;
-      progressLabel.innerText = allQuotes[countCompleted];
+      progressValue.style.width = `${(countCompleted / inputLength) * 100}%`;
+      progressValue.firstElementChild.innerText = `${countCompleted}/${inputLength} completed`;
+      progressLabel.innerText =
+        allQuotes[countCompleted] ||
+        `Congratulation for completing the ${countCompleted}th the goal for today!`;
 
       localStorage.setItem("allGoals", JSON.stringify(allGoals));
     } else {
