@@ -8,8 +8,6 @@ const allQuotes = [
   "Set your Goals for Today",
   "Well begun is half done!",
   "Just few more steps away, keep going!",
-  "Just few more steps away, keep going!",
-  "Just few more steps away, keep going!",
   "Whoa! You just completed all the goals, time for chill :D"
 ];
 const inputLength = inputList.length;
